@@ -1,0 +1,2002 @@
+[
+    {
+    "Statement": "name arg1 arg2 ... argn = <expr>",
+    "Description": "Define a function named 'name' with 'n' arguments and an expression to be evaluated."
+    },
+    {
+    "Statement": "name arg1 arg2 ... argn",
+    "Description": "Calls the function 'name' with 'n' arguments."
+    },
+    {
+    "Statement": "in_range min max x = x >= min && x <= max",
+    "Description": "Checks if the value of x is within the range specified by min and max"
+    },
+    {
+    "Statement": "sum = foldr (+) 0",
+    "Description": "Calculate the sum of a list of numbers using a right fold (foldr) with the addition operator (+) and starting with an initial accumulator value of 0."
+    },
+    {
+    "Statement": "sum [] = 0",
+    "Description": "Define a function 'sum' that takes an empty list as input and returns 0."
+    },
+    {
+    "Statement": "sum (X : XS) = X + sum XS",
+    "Description": "Define a function 'sum' that takes a non-empty list as input, where X is the head of the list and XS is the tail. It recursively calculates the sum of the elements in the list by adding the head (X) to the sum of the tail (sum XS)."
+    },
+    {
+    "Statement": "let x = func1 arg",
+    "Description": "Define a variable 'x' which is assigned the result of calling function 'func1' with argument 'arg'."
+    },
+    {
+    "Statement": "y = func2 arg",
+    "Description": "Define a variable 'y' which is assigned the result of calling function 'func2' with argument 'arg'."
+    },
+    {
+    "Statement": "z = func3 arg",
+    "Description": "Define a variable 'z' which is assigned the result of calling function 'func3' with argument 'arg'."
+    },
+    {
+    "Statement": "if z then x else y",
+    "Description": "Conditional Statement that evaluates 'z'. If 'z' is true, evaluates 'x'; otherwise, evaluates 'y'."
+    },
+    {
+    "Statement": "int func(int arg) {",
+    "Description": "Start the definition of a function named 'func' that takes an integer argument 'arg'."
+    },
+    {
+    "Statement": "int x = func1 (arg);",
+    "Description": "Define a variable 'x' of type integer which is assigned the result of calling function 'func1' with argument 'arg'."
+    },
+    {
+    "Statement": "int y = func2 (arg);",
+    "Description": "Define a variable 'y' of type integer which is assigned the result of calling function 'func2' with argument 'arg'."
+    },
+    {
+    "Statement": "int z = func3 (arg);",
+    "Description": "Define a variable 'z' of type integer which is assigned the result of calling function 'func3' with argument 'arg'."
+    },
+    {
+    "Statement": "if (z) {",
+    "Description": "Start a conditional Statement based on the value of 'z'."
+    },
+    {
+    "Statement": "return x;",
+    "Description": "Return the value of 'x' if 'z' is true."
+    },
+    {
+    "Statement": "} else {",
+    "Description": "Handle the else part of the conditional Statement."
+    },
+    {
+    "Statement": "return y;",
+    "Description": "Return the value of 'y' if 'z' is false."
+    },
+    {
+    "Statement": "}",
+    "Description": "End the conditional Statement and the function definition."
+    },
+    {
+    "Statement": "name arg1 arg2 ... argn = \"<expr>",
+    "Description": "Define a function named 'name' with 'n' arguments 'arg1' to 'argn' that evaluates to the expression '<expr>'."
+    },
+    {
+    "Statement": "name arg1 arg2 ... argn",
+    "Description": "Define a function named 'name' with 'n' arguments 'arg1' to 'argn'."
+    },
+    {
+    "Statement": "in_range min max x = x >= min && x <= max",
+    "Description": "Define a function 'in_range' that takes three arguments: 'min', 'max', and 'x'. It returns true if 'x' is within the range [min, max] (inclusive), otherwise false."
+    },
+    {
+    "Statement": "in_range 0 5 3",
+    "Description": "Check if the value 3 is within the range [0, 5]."
+    },
+    {
+    "Statement": "in_range 4 5 3",
+    "Description": "Check if the value 3 is within the range [4, 5]."
+    },
+    {
+    "Statement": "name :: <type>",
+    "Description": "Declare the type signature of a value or function named 'name' as '<type>'."
+    },
+    {
+        "Statement": "double x = x * 2",
+        "Description": "Define a variable 'double' which is assigned the result of doubling the value of 'x'."
+    },
+    {
+        "Statement": "triple x = x * 3",
+        "Description": "Define a variable 'triple' which is assigned the result of tripling the value of 'x'."
+    },
+    {
+        "Statement": "square x = x * x",
+        "Description": "Define a function 'square' that calculates the square of the value 'x'."
+    },
+    {
+        "Statement": "cube x = x * x * x",
+        "Description": "Define a function 'cube' that calculates the cube of the value 'x'."
+    },
+    {
+        "Statement": "is_even x = mod x 2 == 0",
+        "Description": "Define a function 'is_even' that checks if the value 'x' is even."
+    },
+    {
+        "Statement": "is_odd x = mod x 2 /= 0",
+        "Description": "Define a function 'is_odd' that checks if the value 'x' is odd."
+    },
+    {
+        "Statement": "average x y = (x + y) / 2",
+        "Description": "Define a function 'average' that calculates the average of two values 'x' and 'y'."
+    },
+    {
+        "Statement": "quadratic a b c x = a * x^2 + b * x + c",
+        "Description": "Define a function 'quadratic' that calculates the value of a quadratic equation with coefficients 'a', 'b', 'c', and input 'x'."
+    },
+    {
+        "Statement": "factorial n = product [1..n]",
+        "Description": "Define a function 'factorial' that calculates the factorial of the non-negative integer 'n'."
+    },
+    {
+        "Statement": "fibonacci 0 = 0",
+        "Description": "Define a function 'fibonacci' that returns 0 for input 0."
+    },
+    {
+        "Statement": "fibonacci 1 = 1",
+        "Description": "Define a function 'fibonacci' that returns 1 for input 1."
+    },
+    {
+        "Statement": "fibonacci n = fibonacci (n - 1) + fibonacci (n - 2)",
+        "Description": "Define a function 'fibonacci' that calculates the Fibonacci sequence for non-negative integers 'n' greater than 1."
+    },
+    {
+        "Statement": "is_prime n = n > 1 && all (\\x -> n `mod` x /= 0) [2..sqrt n]",
+        "Description": "Define a function 'is_prime' that checks if the integer 'n' is a prime number."
+    },
+    {
+        "Statement": "gcd a b = if b == 0 then a else gcd b (a `mod` b)",
+        "Description": "Define a function 'gcd' that calculates the greatest common divisor of two non-negative integers 'a' and 'b'."
+    },
+    {
+        "Statement": "lcm a b = abs (a * b) `div` gcd a b",
+        "Description": "Define a function 'lcm' that calculates the least common multiple of two non-negative integers 'a' and 'b'."
+    },
+    {
+        "Statement": "reverse_list [] = []",
+        "Description": "Define a function 'reverse_list' that returns an empty list when given an empty list as input."
+    },
+    {
+        "Statement": "reverse_list (x:xs) = reverse_list xs ++ [x]",
+        "Description": "Define a function 'reverse_list' that reverses the elements of a list."
+    },
+    {
+        "Statement": "is_palindrome xs = xs == reverse xs",
+        "Description": "Define a function 'is_palindrome' that checks if a list is a palindrome."
+    },
+    {
+        "Statement": "maximum' (x:xs) = foldl max x xs",
+        "Description": "Define a function 'maximum'' that returns the maximum element in a non-empty list."
+    },
+    {
+        "Statement": "minimum' (x:xs) = foldl min x xs",
+        "Description": "Define a function 'minimum'' that returns the minimum element in a non-empty list."
+    },
+    {
+        "Statement": "length' xs = sum [1 | _ <- xs]",
+        "Description": "Define a function 'length'' that calculates the length of a list."
+    },
+    {
+        "Statement": "remove_duplicates xs = foldl (\\seen x -> if x `elem` seen then seen else seen ++ [x]) [] xs",
+        "Description": "Define a function 'remove_duplicates' that removes duplicate elements from a list while preserving the original order."
+    },
+    {
+        "Statement": "zip_with' f (x:xs) (y:ys) = f x y : zip_with' f xs ys",
+        "Description": "Define a function 'zip_with'' that combines two lists using a given function 'f'."
+    },
+    {
+        "Statement": "transpose [] = []",
+        "Description": "Define a function 'transpose' that transposes a list of lists."
+    },
+    {
+        "Statement": "transpose ([]:_) = []",
+        "Description": "Define a function 'transpose' that transposes a list of lists, handling empty lists."
+    },
+    {
+        "Statement": "transpose xss = (map head xss) : transpose (map tail xss)",
+        "Description": "Define a function 'transpose' that transposes a list of lists."
+    },
+    {
+        "Statement": "quick_sort [] = []",
+        "Description": "Define a function 'quick_sort' that sorts an empty list."
+    },
+    {
+        "Statement": "quick_sort (x:xs) = quick_sort [y | y <- xs, y <= x] ++ [x] ++ quick_sort [y | y <- xs, y > x]",
+        "Description": "Define a function 'quick_sort' that implements the quicksort algorithm to sort a list."
+    },
+    {
+        "Statement": "binary_search _ [] = False",
+        "Description": "Define a function 'binary_search' that returns False when given an empty list."
+    },
+    {
+        "Statement": "binary_search key (x:xs)\n  | key == x  = True\n  | key < x   = binary_search key (take (length xs `div` 2) xs)\n  | otherwise = binary_search key (drop (length xs `div` 2) xs)",
+        "Description": "Define a function 'binary_search' that performs a binary search on a sorted list."
+    },
+    {
+        "Statement": "fibonacci_series n = take n (map fst fibs)",
+        "Description": "Define a function 'fibonacci_series' that generates the first 'n' Fibonacci numbers."
+    },
+    {
+        "Statement": "fibs = iterate fib (0,1)",
+        "Description": "Define a list 'fibs' that generates Fibonacci numbers using lazy evaluation."
+    },
+    {
+        "Statement": "fib (a,b) = (b,a+b)",
+        "Description": "Define a function 'fib' that generates the next Fibonacci number in the sequence."
+    },
+    {
+        "Statement": "power _ 0 = 1",
+        "Description": "Define a function 'power' that returns 1 when raising any number to the power of 0."
+    },
+    {
+        "Statement": "power x n = x * power x (n - 1)",
+        "Description": "Define a function 'power' that calculates the result of raising a number 'x' to the power of 'n'."
+    },
+    {
+        "Statement": "map' f [] = []",
+        "Description": "Define a function 'map'' that returns an empty list when given an empty list as input."
+    },
+    {
+        "Statement": "map' f (x:xs) = f x : map' f xs",
+        "Description": "Define a function 'map'' that applies a function 'f' to each element of a list."
+    },
+    {
+        "Statement": "filter' _ [] = []",
+        "Description": "Define a function 'filter'' that returns an empty list when given an empty list as input."
+    },
+    {
+        "Statement": "filter' p (x:xs)\n  | p x       = x : filter' p xs\n  | otherwise = filter' p xs",
+        "Description": "Define a function 'filter'' that filters elements from a list based on a predicate 'p'."
+    },
+    {
+        "Statement": "foldl' _ acc [] = acc",
+        "Description": "Define a function 'foldl'' that returns the accumulator when given an empty list as input."
+    },
+    {
+        "Statement": "foldl' f acc (x:xs) = foldl' f (f acc x) xs",
+        "Description": "Define a function 'foldl'' that applies a binary function 'f' to the accumulator and each element of a list from left to right."
+    },
+    {
+        "Statement": "foldr' _ acc [] = acc",
+        "Description": "Define a function 'foldr'' that returns the accumulator when given an empty list as input."
+    },
+    {
+        "Statement": "foldr' f acc (x:xs) = f x (foldr' f acc xs)",
+        "Description": "Define a function 'foldr'' that applies a binary function 'f' to each element of a list from right to left and the accumulator."
+    },
+    {
+        "Statement": "elem' _ [] = False",
+        "Description": "Define a function 'elem'' that returns False when given an empty list."
+    },
+    {
+        "Statement": "elem' y (x:xs)\n  | x == y    = True\n  | otherwise = elem' y xs",
+        "Description": "Define a function 'elem'' that checks if an element 'y' is present in a list."
+    },
+    {
+        "Statement": "flatten [] = []",
+        "Description": "Define a function 'flatten' that returns an empty list when given an empty list as input."
+    },
+    {
+        "Statement": "flatten (x:xs) = x ++ flatten xs",
+        "Description": "Define a function 'flatten' that flattens a list of lists."
+    },
+    {
+        "Statement": "take' _ [] = []",
+        "Description": "Define a function 'take'' that returns an empty list when given an empty list as input."
+    },
+    {
+        "Statement": "take' n (x:xs)\n  | n <= 0    = []\n  | otherwise = x : take' (n - 1) xs",
+        "Description": "Define a function 'take'' that takes the first 'n' elements from a list."
+    },
+    {
+        "Statement": "drop' _ [] = []",
+        "Description": "Define a function 'drop'' that returns an empty list when given an empty list as input."
+    },
+    {
+        "Statement": "drop' n xs\n  | n <= 0    = xs\n  | otherwise = drop' (n - 1) (tail xs)",
+        "Description": "Define a function 'drop'' that drops the first 'n' elements from a list."
+    },
+    {
+        "Statement": "split_at _ [] = ([], [])",
+        "Description": "Define a function 'split_at' that returns a tuple of two empty lists when given an empty list as input."
+    },
+    {
+        "Statement": "split_at n xs = (take' n xs, drop' n xs)",
+        "Description": "Define a function 'split_at' that splits a list at position 'n' into two sublists."
+    },
+    {
+    "Statement": "x :: Integer",
+    "Description": "Declare a variable 'x' with type Integer."
+    },
+    {
+    "Statement": "x = 1",
+    "Description": "Assign the value 1 to the variable 'x'."
+    },
+    {
+    "Statement": "y :: Bool",
+    "Description": "Declare a variable 'y' with type Bool."
+    },
+    {
+    "Statement": "y = True",
+    "Description": "Assign the value True to the variable 'y'."
+    },
+    {
+    "Statement": "z :: Float",
+    "Description": "Declare a variable 'z' with type Float."
+    },
+    {
+    "Statement": "z = 3.1415",
+    "Description": "Assign the value 3.1415 to the variable 'z'."
+    },
+    {
+    "Statement": "in_range :: Integer -> Integer -> Integer -> Bool",
+    "Description": "Declare a function 'in_range' that takes three Integer arguments and returns a Bool."
+    },
+    {
+    "Statement": "in_range min max x = x >= min && x <= max",
+    "Description": "Define the 'in_range' function to check if 'x' is within the range [min, max]."
+    },
+    {
+    "Statement": "in_range 0 5 3 <-- correct",
+    "Description": "Call the 'in_range' function with arguments 0, 5, and 3. This is a correct usage."
+    },
+    {
+    "Statement": "in_range min max x =",
+    "Description": "Define a function 'in_range' that takes three arguments: 'min', 'max', and 'x'."
+    },
+    {
+    "Statement": "in_lower_bound = min <= x;",
+    "Description": "Check if 'x' is greater than or equal to 'min' and assign the result to 'in_lower_bound'."
+    },
+    {
+    "Statement": "in_upper_bound = max >= x;",
+    "Description": "Check if 'x' is less than or equal to 'max' and assign the result to 'in_upper_bound'."
+    },
+    {
+    "Statement": "return (in_lower_bound && in_upper_bound);",
+    "Description": "Return true if 'x' is within the range [min, max], otherwise false."
+    },
+    {
+    "Statement": "in_range min max x = ilb && iub",
+    "Description": "Define a function 'in_range' that takes three arguments: 'min', 'max', and 'x', and returns whether 'x' is within the range [min, max]."
+    },
+    {
+    "Statement": "ilb = min <= x",
+    "Description": "Check if 'x' is greater than or equal to 'min' and assign the result to 'ilb'."
+    },
+    {
+    "Statement": "iub = max >= x",
+    "Description": "Check if 'x' is less than or equal to 'max' and assign the result to 'iub'."
+    },
+    {
+    "Statement": "in_range min max x = if ilb then iub else False",
+    "Description": "Define a function 'in_range' that takes three arguments: 'min', 'max', and 'x'. It returns True if 'x' is within the range [min, max], otherwise False."
+    },
+    {
+    "Statement": "ilb = min <= x",
+    "Description": "Check if 'x' is greater than or equal to 'min' and assign the result to 'ilb'."
+    },
+    {
+    "Statement": "iub = max >= x",
+    "Description": "Check if 'x' is less than or equal to 'max' and assign the result to 'iub'."
+    },
+    {
+    "Statement": "add a b = a+b",
+    "Description": "Define a function 'add' that takes two arguments 'a' and 'b' and returns their sum."
+    },
+    {
+    "Statement": "add 10 20",
+    "Description": "Call the function 'add' with arguments 10 and 20, resulting in the sum of 10 and 20."
+    },
+    {
+    "Statement": "name <args> = ... name <args'> ...",
+    "Description": "Define a recursive function named 'name' that takes arguments '<args>' and recurses on itself with arguments '<args>'."
+    },
+    {
+    "Statement": "fac n = if n <= 1 then 1 else n * fac (n-1)",
+    "Description": "Define a recursive function 'fac' that calculates the factorial of 'n'. If 'n' is less than or equal to 1, return 1; otherwise, return 'n' multiplied by the factorial of 'n-1'."
+    },
+    {
+    "Statement": "fac n | n <= 1  =1 | otherwise = n * fac (n-1)",
+    "Description": "Define a function 'fac' that calculates the factorial of 'n'. If 'n' is less than or equal to 1, return 1; otherwise, return 'n' multiplied by the factorial of 'n-1'."
+    },
+    {
+    "Statement": "is_zero 0 = True | is_zero _ = False",
+    "Description": "Define a function 'is_zero' that pattern matches on its argument. If the argument is 0, return True; otherwise, return False."
+    },
+    {
+        "Statement": "x :: Int",
+        "Description": "Declare a variable 'x' with type Int."
+    },
+    {
+        "Statement": "x = 42",
+        "Description": "Assign the value 42 to the variable 'x'."
+    },
+    {
+        "Statement": "y :: String",
+        "Description": "Declare a variable 'y' with type String."
+    },
+    {
+        "Statement": "y = \"Hello, World!\"",
+        "Description": "Assign the value \"Hello, World!\" to the variable 'y'."
+    },
+    {
+        "Statement": "z :: Double",
+        "Description": "Declare a variable 'z' with type Double."
+    },
+    {
+        "Statement": "z = 3.14",
+        "Description": "Assign the value 3.14 to the variable 'z'."
+    },
+    {
+        "Statement": "square :: Int -> Int",
+        "Description": "Declare a function 'square' that takes an Int argument and returns an Int."
+    },
+    {
+        "Statement": "square n = n * n",
+        "Description": "Define the 'square' function to calculate the square of a number 'n'."
+    },
+    {
+        "Statement": "square 5",
+        "Description": "Call the 'square' function with argument 5."
+    },
+    {
+        "Statement": "cube :: Int -> Int",
+        "Description": "Declare a function 'cube' that takes an Int argument and returns an Int."
+    },
+    {
+        "Statement": "cube n = n * n * n",
+        "Description": "Define the 'cube' function to calculate the cube of a number 'n'."
+    },
+    {
+        "Statement": "cube 3",
+        "Description": "Call the 'cube' function with argument 3."
+    },
+    {
+        "Statement": "isEven :: Int -> Bool",
+        "Description": "Declare a function 'isEven' that takes an Int argument and returns a Bool."
+    },
+    {
+        "Statement": "isEven n = n `mod` 2 == 0",
+        "Description": "Define the 'isEven' function to check if a number 'n' is even."
+    },
+    {
+        "Statement": "isEven 10",
+        "Description": "Call the 'isEven' function with argument 10."
+    },
+    {
+        "Statement": "isOdd :: Int -> Bool",
+        "Description": "Declare a function 'isOdd' that takes an Int argument and returns a Bool."
+    },
+    {
+        "Statement": "isOdd n = not (isEven n)",
+        "Description": "Define the 'isOdd' function to check if a number 'n' is odd."
+    },
+    {
+        "Statement": "isOdd 7",
+        "Description": "Call the 'isOdd' function with argument 7."
+    },
+    {
+        "Statement": "maxOfThree :: Int -> Int -> Int -> Int",
+        "Description": "Declare a function 'maxOfThree' that takes three Int arguments and returns the maximum Int."
+    },
+    {
+        "Statement": "maxOfThree a b c = max a (max b c)",
+        "Description": "Define the 'maxOfThree' function to find the maximum of three Integers."
+    },
+    {
+        "Statement": "maxOfThree 4 9 2",
+        "Description": "Call the 'maxOfThree' function with arguments 4, 9, and 2."
+    },
+    {
+        "Statement": "minOfThree :: Int -> Int -> Int -> Int",
+        "Description": "Declare a function 'minOfThree' that takes three Int arguments and returns the minimum Int."
+    },
+    {
+        "Statement": "minOfThree a b c = min a (min b c)",
+        "Description": "Define the 'minOfThree' function to find the minimum of three Integers."
+    },
+    {
+        "Statement": "minOfThree 4 9 2",
+        "Description": "Call the 'minOfThree' function with arguments 4, 9, and 2."
+    },
+    {
+        "Statement": "sumOfList :: [Int] -> Int",
+        "Description": "Declare a function 'sumOfList' that takes a list of Integers and returns their sum."
+    },
+    {
+        "Statement": "sumOfList [] = 0",
+        "Description": "Define the 'sumOfList' function's base case for an empty list."
+    },
+    {
+        "Statement": "sumOfList (x:xs) = x + sumOfList xs",
+        "Description": "Define the 'sumOfList' function to recursively calculate the sum of a list."
+    },
+    {
+        "Statement": "sumOfList [1, 2, 3, 4, 5]",
+        "Description": "Call the 'sumOfList' function with a list [1, 2, 3, 4, 5]."
+    },
+    {
+        "Statement": "prodOfList :: [Int] -> Int",
+        "Description": "Declare a function 'prodOfList' that takes a list of Integers and returns their product."
+    },
+    {
+        "Statement": "prodOfList [] = 1",
+        "Description": "Define the 'prodOfList' function's base case for an empty list."
+    },
+    {
+        "Statement": "prodOfList (x:xs) = x * prodOfList xs",
+        "Description": "Define the 'prodOfList' function to recursively calculate the product of a list."
+    },
+    {
+        "Statement": "prodOfList [1, 2, 3, 4, 5]",
+        "Description": "Call the 'prodOfList' function with a list [1, 2, 3, 4, 5]."
+    },
+    {
+        "Statement": "fib :: Int -> Int",
+        "Description": "Declare a function 'fib' that takes an Int argument and returns the Fibonacci number at that position."
+    },
+    {
+        "Statement": "fib 0 = 0",
+        "Description": "Define the 'fib' function's base case for 0."
+    },
+    {
+        "Statement": "fib 1 = 1",
+        "Description": "Define the 'fib' function's base case for 1."
+    },
+    {
+        "Statement": "fib n = fib (n - 1) + fib (n - 2)",
+        "Description": "Define the 'fib' function to recursively calculate the Fibonacci sequence."
+    },
+    {
+        "Statement": "fib 6",
+        "Description": "Call the 'fib' function with argument 6."
+    },
+    {
+        "Statement": "gcd' :: Int -> Int -> Int",
+        "Description": "Declare a function 'gcd'' that takes two Int arguments and returns their greatest common divisor."
+    },
+    {
+        "Statement": "gcd' a 0 = a",
+        "Description": "Define the 'gcd'' function's base case when the second argument is 0."
+    },
+    {
+        "Statement": "gcd' a b = gcd' b (a `mod` b)",
+        "Description": "Define the 'gcd'' function using Euclid's algorithm."
+    },
+    {
+        "Statement": "gcd' 24 36",
+        "Description": "Call the 'gcd'' function with arguments 24 and 36."
+    },
+    {
+        "Statement": "power :: Int -> Int -> Int",
+        "Description": "Declare a function 'power' that takes an Int base and an Int exponent and returns the base raised to the exponent."
+    },
+    {
+        "Statement": "power _ 0 = 1",
+        "Description": "Define the 'power' function's base case for exponent 0."
+    },
+    {
+        "Statement": "power base exp = base * power base (exp - 1)",
+        "Description": "Define the 'power' function to recursively calculate the power of a number."
+    },
+    {
+        "Statement": "power 2 5",
+        "Description": "Call the 'power' function with base 2 and exponent 5."
+    },
+    {
+        "Statement": "isPalindrome :: String -> Bool",
+        "Description": "Declare a function 'isPalindrome' that takes a String argument and returns whether it's a palindrome."
+    },
+    {
+        "Statement": "isPalindrome str = str == reverse str",
+        "Description": "Define the 'isPalindrome' function to check if a string is the same forwards and backwards."
+    },
+    {
+        "Statement": "isPalindrome \"racecar\"",
+        "Description": "Call the 'isPalindrome' function with argument \"racecar\"."
+    },
+    {
+        "Statement": "sortByLength :: [String] -> [String]",
+        "Description": "Declare a function 'sortByLength' that takes a list of Strings and returns them sorted by length."
+    },
+    {
+        "Statement": "sortByLength strs = sortBy (comparing length) strs",
+        "Description": "Define the 'sortByLength' function to sort the list of strings by their length."
+    },
+    {
+        "Statement": "sortByLength [\"apple\", \"banana\", \"orange\", \"strawberry\"]",
+        "Description": "Call the 'sortByLength' function with a list of fruits."
+    },
+    {
+        "Statement": "insertionSort :: Ord a => [a] -> [a]",
+        "Description": "Declare a function 'insertionSort' that takes a list of comparable elements and returns them sorted in non-decreasing order."
+    },
+    {
+        "Statement": "insertionSort [] = []",
+        "Description": "Define the 'insertionSort' function's base case for an empty list."
+    },
+    {
+        "Statement": "insertionSort (x:xs) = insert x (insertionSort xs)",
+        "Description": "Define the 'insertionSort' function using the insertion sort algorithm."
+    },
+    {
+        "Statement": "insertionSort [5, 2, 4, 6, 1, 3]",
+        "Description": "Call the 'insertionSort' function with an unsorted list of integers."
+    },
+    {
+        "Statement": "quicksort :: Ord a => [a] -> [a]",
+        "Description": "Declare a function 'quicksort' that takes a list of comparable elements and returns them sorted in non-decreasing order using the quicksort algorithm."
+    },
+    {
+        "Statement": "quicksort [] = []",
+        "Description": "Define the 'quicksort' function's base case for an empty list."
+    },
+    {
+        "Statement": "quicksort (x:xs) = quicksort [y | y <- xs, y <= x] ++ [x] ++ quicksort [y | y <- xs, y > x]",
+        "Description": "Define the 'quicksort' function using the quicksort algorithm."
+    },
+    {
+        "Statement": "quicksort [5, 2, 4, 6, 1, 3]",
+        "Description": "Call the 'quicksort' function with an unsorted list of integers."
+    },
+    {
+        "Statement": "reverseList :: [a] -> [a]",
+        "Description": "Declare a function 'reverseList' that takes a list of elements and returns it in reverse order."
+    },
+    {
+        "Statement": "reverseList [] = []",
+        "Description": "Define the 'reverseList' function's base case for an empty list."
+    },
+    {
+        "Statement": "reverseList (x:xs) = reverseList xs ++ [x]",
+        "Description": "Define the 'reverseList' function to reverse a list using recursion."
+    },
+    {
+        "Statement": "reverseList [1, 2, 3, 4, 5]",
+        "Description": "Call the 'reverseList' function with a list [1, 2, 3, 4, 5]."
+    },
+    {
+    "Statement": "fac n = aux n 1 where aux n acc | n <= 1 = acc | otherwise = aux (n-1) (nacc)",
+    "Description": "Define a function 'fac' that calculates the factorial of 'n' using an accumulator. It initializes the accumulator to 1 and calls the auxiliary function 'aux' with 'n' and the accumulator. The 'aux' function recursively calculates the factorial by updating 'n' and 'acc' until 'n' becomes less than or equal to 1, at which point it returns the accumulator."
+    },
+    {
+    "Statement": "[1,2,3,4,5] :: [Integer]",
+    "Description": "Define a list containing integers 1 through 5."
+    },
+    {
+    "Statement": "[]",
+    "Description": "Define an empty list."
+    },
+    {
+    "Statement": "x:xs",
+    "Description": "Represent a list where 'x' is the first element and 'xs' is the rest of the list."
+    },
+    {
+    "Statement": "[1,2,3,4,5]",
+    "Description": "Define a list containing integers 1 through 5 using the cons operator (:)."
+    },
+    {
+    "Statement": "1:2:3:4:5: []",
+    "Description": "Construct a list with integers 1 through 5 using the cons operator (:). Each element is separated by the cons operator, and the list is terminated with an empty list."
+    },
+    {
+    "Statement": "asc :: Int -> Int -> [Int]",
+    "Description": "Define a function 'asc' that generates a list of integers in ascending order."
+    },
+    {
+    "Statement": "asc n m | m<n = [] | m==n = [m] | m>n = n : asc (n+1) m",
+    "Description": "Define the implementation of the 'asc' function using pattern matching. If 'm' is less than 'n', return an empty list. If 'm' equals 'n', return a singleton list containing 'm'. If 'm' is greater than 'n', prepend 'n' to the result of recursively calling 'asc' with 'n+1' and 'm'."
+    },
+    {
+    "Statement": "asc 1 3",
+    "Description": "Call the 'asc' function with arguments 1 and 3, resulting in the list [1,2,3]."
+    },
+    {
+    "Statement": "head :: [a] -> a",
+    "Description": "Return the first element of a list."
+    },
+    {
+    "Statement": "tail :: [a] -> [a]",
+    "Description": "Return all elements of a list except the first one."
+    },
+    {
+    "Statement": "length :: [a] -> Int",
+    "Description": "Return the number of elements in a list."
+    },
+    {
+    "Statement": "init :: [a] -> [a]",
+    "Description": "Return all elements of a list except the last one."
+    },
+    {
+    "Statement": "null :: [a] -> Bool",
+    "Description": "Return True if a list is empty, otherwise False."
+    },
+    {
+    "Statement": "and :: [Bool] -> Bool",
+    "Description": "Return True if all elements in the list are True, otherwise False."
+    },
+    {
+    "Statement": "or :: [Bool] -> Bool",
+    "Description": "Return True if at least one element in the list is True, otherwise False."
+    },
+    {
+    "Statement": "[2x | x <- [1,2,3] ]",
+    "Description": "Generate a list where each element is obtained by doubling each element of the list [1,2,3]."
+    },
+    {
+    "Statement": "[2*x | x <- [1,2,3], x>1 ]",
+    "Description": "Generate a list where each element is obtained by doubling each element of the list [1,2,3], but only if the element is greater than 1."
+    },
+    {
+    "Statement": "[ (x,y) | x <- [1,2,3], y <- ['a','b']]",
+    "Description": "Generate a list of tuples where each tuple contains an element from the list [1,2,3] paired with each element from the list ['a','b']."
+    },
+    {
+    "Statement": "sum :: [Int] -> Int",
+    "Description": "Define a function 'sum' that takes a list of integers and returns their sum."
+    },
+    {
+    "Statement": "sum [] = 0",
+    "Description": "Base case: If the list is empty, the sum is 0."
+    },
+    {
+    "Statement": "sum (x:xs) = x + sum xs",
+    "Description": "Recursive case: If the list is not empty, sum the head of the list 'x' with the sum of the rest of the list 'xs'."
+    },
+    {
+    "Statement": "evens :: [Int] -> [Int]",
+    "Description": "Define a function 'evens' that takes a list of integers and returns a list containing only the even integers."
+    },
+    {
+    "Statement": "evens [] = []",
+    "Description": "Base case: If the list is empty, the result is an empty list."
+    },
+    {
+    "Statement": "evens (x:xs)\n | mod x 2 == 0 = x : evens xs,\n | otherwise = evens xs",
+    "Description": "If the head of the list 'x' is even, add to the result list, and the function is called recursively on the rest of the list 'xs'. If the head of the list 'x' is odd, it is not added to the result list, and the function is called recursively on the rest of the list 'xs'."
+    },
+{
+    "Statement": "maximum :: (Ord a) => [a] -> a",
+    "Description": "Define a function 'maximum' that takes a list of comparable elements and returns the maximum element."
+    },
+    {
+    "Statement": "maximum [] = error \"maximum of empty list\"",
+    "Description": "Handle the case of an empty list by throwing an error."
+    },
+    {
+    "Statement": "maximum [x] = x",
+    "Description": "Base case: If the list contains only one element, return that element."
+    },
+    {
+    "Statement": "maximum (x:xs) = max x (maximum xs)",
+    "Description": "Recursive case: Compare the head of the list 'x' with the maximum of the rest of the list 'xs' and return the greater element."
+    },
+    {
+    "Statement": "minimum :: (Ord a) => [a] -> a",
+    "Description": "Define a function 'minimum' that takes a list of comparable elements and returns the minimum element."
+    },
+    {
+    "Statement": "minimum [] = error \"minimum of empty list\"",
+    "Description": "Handle the case of an empty list by throwing an error."
+    },
+    {
+    "Statement": "minimum [x] = x",
+    "Description": "Base case: If the list contains only one element, return that element."
+    },
+    {
+    "Statement": "minimum (x:xs) = min x (minimum xs)",
+    "Description": "Recursive case: Compare the head of the list 'x' with the minimum of the rest of the list 'xs' and return the smaller element."
+    },
+    {
+    "Statement": "reverse :: [a] -> [a]",
+    "Description": "Define a function 'reverse' that reverses a list."
+    },
+    {
+    "Statement": "reverse [] = []",
+    "Description": "Base case: If the list is empty, the reversed list is also empty."
+    },
+    {
+    "Statement": "reverse (x:xs) = reverse xs ++ [x]",
+    "Description": "Recursive case: Reverse the rest of the list 'xs' and append the head 'x' at the end."
+    },
+    {
+    "Statement": "take :: Int -> [a] -> [a]",
+    "Description": "Define a function 'take' that extracts a specified number of elements from the beginning of a list."
+    },
+    {
+    "Statement": "take n _\n | n <= 0 = []",
+    "Description": "If the number of elements to take 'n' is less than or equal to zero, return an empty list."
+    },
+    {
+    "Statement": "take _ [] = []",
+    "Description": "If the list is empty, return an empty list regardless of the number of elements to take."
+    },
+    {
+    "Statement": "take n (x:xs) = x : take (n-1) xs",
+    "Description": "Take the first element 'x' and recursively take 'n-1' elements from the rest of the list 'xs'."
+    },
+    {
+    "Statement": "drop :: Int -> [a] -> [a]",
+    "Description": "Define a function 'drop' that removes a specified number of elements from the beginning of a list."
+    },
+    {
+    "Statement": "drop n xs\n | n <= 0 = xs",
+    "Description": "If the number of elements to drop 'n' is less than or equal to zero, return the original list 'xs'."
+    },
+    {
+    "Statement": "drop _ [] = []",
+    "Description": "If the list is empty, return an empty list regardless of the number of elements to drop."
+    },
+    {
+    "Statement": "drop n (_:xs) = drop (n-1) xs",
+    "Description": "Drop the first element and recursively drop 'n-1' elements from the rest of the list."
+    },
+    {
+    "Statement": "takeWhile :: (a -> Bool) -> [a] -> [a]",
+    "Description": "Define a function 'takeWhile' that takes elements from the beginning of a list while a predicate holds."
+    },
+    {
+    "Statement": "takeWhile _ [] = []",
+    "Description": "If the list is empty, return an empty list."
+    },
+    {
+    "Statement": "takeWhile p (x:xs)\n | p x = x : takeWhile p xs",
+    "Description": "If the predicate 'p' holds for the head of the list 'x', include 'x' in the result and recursively take elements while 'p' holds from the rest of the list 'xs'."
+    },
+    {
+    "Statement": "takeWhile _ _ = []",
+    "Description": "If the predicate 'p' does not hold for the head of the list 'x', return an empty list."
+    },
+    {
+    "Statement": "dropWhile :: (a -> Bool) -> [a] -> [a]",
+    "Description": "Define a function 'dropWhile' that drops elements from the beginning of a list while a predicate holds."
+    },
+    {
+    "Statement": "dropWhile _ [] = []",
+    "Description": "If the list is empty, return an empty list."
+    },
+    {
+    "Statement": "dropWhile p (x:xs)\n | p x = dropWhile p xs",
+    "Description": "If the predicate 'p' holds for the head of the list 'x', continue dropping elements recursively from the rest of the list 'xs' until 'p' does not hold."
+    },
+    {
+    "Statement": "dropWhile _ xs = xs",
+    "Description": "If the predicate 'p' does not hold for the head of the list 'x', return the original list 'xs'."
+    },
+    {
+    "Statement": "zip :: [a] -> [b] -> [(a,b)]",
+    "Description": "Define a function 'zip' that takes two lists and pairs corresponding elements together."
+    },
+    {
+    "Statement": "zip [] _ = []",
+    "Description": "If the first list is empty, return an empty list regardless of the second list."
+    },
+    {
+    "Statement": "zip _ [] = []",
+    "Description": "If the second list is empty, return an empty list regardless of the first list."
+    },
+    {
+    "Statement": "zip (x:xs) (y:ys) = (x,y) : zip xs ys",
+    "Description": "Pair the head elements of both lists 'x' and 'y' and recursively zip the rest of the lists."
+    },
+    {
+    "Statement": "zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]",
+    "Description": "Define a function 'zipWith' that takes a function and two lists, applies the function to each pair of elements from the lists, and returns a list of results."
+    },
+    {
+    "Statement": "zipWith _ [] _ = []",
+    "Description": "If the first list is empty, return an empty list regardless of the second list."
+    },
+    {
+    "Statement": "zipWith _ _ [] = []",
+    "Description": "If the second list is empty, return an empty list regardless of the first list."
+    },
+    {
+    "Statement": "zipWith f (x:xs) (y:ys) = f x y : zipWith f xs ys",
+    "Description": "Apply the function 'f' to the corresponding elements of both lists 'x' and 'y' and recursively apply 'f' to the rest of the lists."
+    },
+    {
+    "Statement": "elem :: (Eq a) => a -> [a] -> Bool",
+    "Description": "Define a function 'elem' that checks if an element is present in a list."
+    },
+    {
+    "Statement": "elem _ [] = False",
+    "Description": "If the list is empty, the element is not present, so return False."
+    },
+    {
+    "Statement": "elem a (x:xs)\n | a == x = True",
+    "Description": "If the element 'a' is equal to the head of the list 'x', it is present, so return True."
+    },
+    {
+    "Statement": "elem a (_:xs) = elem a xs",
+    "Description": "Otherwise, recursively check for the element 'a' in the rest of the list 'xs'."
+    },
+    {
+    "Statement": "notElem :: (Eq a) => a -> [a] -> Bool",
+    "Description": "Define a function 'notElem' that checks if an element is not present in a list."
+    },
+    {
+    "Statement": "notElem _ [] = True",
+    "Description": "If the list is empty, the element is not present, so return True."
+    },
+    {
+    "Statement": "notElem a (x:xs)\n | a == x = False",
+    "Description": "If the element 'a' is equal to the head of the list 'x', it is present, so return False."
+    },
+    {
+    "Statement": "notElem a (_:xs) = notElem a xs",
+    "Description": "Otherwise, recursively check if the element 'a' is not present in the rest of the list 'xs'."
+    },
+    {
+    "Statement": "partition :: (a -> Bool) -> [a] -> ([a],[a])",
+    "Description": "Define a function 'partition' that partitions a list into two lists based on a predicate."
+    },
+    {
+    "Statement": "partition _ [] = ([], [])",
+    "Description": "If the list is empty, return two empty lists."
+    },
+    {
+    "Statement": "partition p (x:xs)\n | p x = (x : trues, falses)",
+    "Description": "If the predicate 'p' holds for the head of the list 'x', add 'x' to the list of true elements and recursively partition the rest of the list 'xs'."
+    },
+    {
+    "Statement": "partition p (x:xs) = (trues, x : falses)",
+    "Description": "If the predicate 'p' does not hold for the head of the list 'x', add 'x' to the list of false elements and recursively partition the rest of the list 'xs'."
+    },
+    {
+    "Statement": "group :: (Eq a) => [a] -> [[a]]",
+    "Description": "Define a function 'group' that groups consecutive equal elements into sublists."
+    },
+    {
+    "Statement": "group [] = []",
+    "Description": "If the list is empty, return an empty list."
+    },
+    {
+    "Statement": "group (x:xs) = (x : same) : group rest",
+    "Description": "Group consecutive equal elements starting from the head 'x' into a sublist 'x : same' and recursively group the rest of the list 'rest'."
+    },
+    {
+    "Statement": "group (x:xs) = [x : same] ++ group rest",
+    "Description": "Alternative approach: Group consecutive equal elements starting from the head 'x' into a sublist 'x : same' and recursively group the rest of the list 'rest'."
+    },
+    {
+    "Statement": "delete :: (Eq a) => a -> [a] -> [a]",
+    "Description": "Define a function 'delete' that removes the first occurrence of an element from a list."
+    },
+    {
+    "Statement": "delete _ [] = []",
+    "Description": "If the list is empty, return an empty list."
+    },
+    {
+    "Statement": "delete a (x:xs)\n | a == x = xs",
+    "Description": "If the element 'a' is equal to the head of the list 'x', remove 'x' and return the rest of the list 'xs'."
+    },
+    {
+    "Statement": "delete a (x:xs) = x : delete a xs",
+    "Description": "Otherwise, keep the head of the list 'x' and recursively delete the element 'a' from the rest of the list 'xs'."
+    },
+    {
+    "Statement": "(1,2) :: (Int, Int)",
+    "Description": "Represent a tuple containing two integers."
+    },
+    {
+    "Statement": "fst :: (a,b) -> a",
+    "Description": "Return the first element of a tuple."
+    },
+    {
+    "Statement": "fst (x,) = x",
+    "Description": "Define the function 'fst' which extracts the first element of a tuple."
+    },
+    {
+    "Statement": "snd :: (a,b) -> b",
+    "Description": "Return the second element of a tuple."
+    },
+    {
+    "Statement": "snd (,y) = y",
+    "Description": "Define the function 'snd' which extracts the second element of a tuple."
+    },
+    {
+    "Statement": "let (x,y) = (1,2) in x",
+    "Description": "Bind the tuple (1,2) to variables x and y, then returns the value of x, which is 1."
+    },
+    {
+    "Statement": "addTuples :: [(Int, Int)] -> [Int]",
+    "Description": "Define a function 'addTuples' that takes a list of tuples of integers and returns a list of integers."
+    },
+    {
+    "Statement": "addTuples xs = [ x+y | (x,y) <- xs ]",
+    "Description": "Generate a list by adding the first and second elements of each tuple in the input list."
+    },
+    {
+    "Statement": "addTuples [(1,2), (2,3), (100,100)]",
+    "Description": "Call the function 'addTuples' with a list of tuples [(1,2), (2,3), (100,100)], resulting in [3,5,200]."
+    },
+    {
+    "Statement": "app :: (a -> b) -> a->b",
+    "Description": "Define a higher-order function 'app' that takes a function 'f' and a value 'x' as arguments, and applies 'f' to 'x'."
+    },
+    {
+    "Statement": "app f x = f x",
+    "Description": "Implement the 'app' function by applying the function 'f' to the value 'x'."
+    },
+    {
+    "Statement": "\\x -> x+1",
+    "Description": "Define an anonymous function that takes a parameter 'x' and returns 'x+1'."
+    },
+    {
+    "Statement": "add1 = \\x -> x+1",
+    "Description": "Bind the anonymous function \\x -> x+1 to the name 'add1'."
+    },
+    {
+    "Statement": "\\x y z -> x+y+z",
+    "Description": "Define an anonymous function that takes three parameters 'x', 'y', and 'z', and returns their sum."
+    },
+    {
+    "Statement": "(\\x -> x+1) 1",
+    "Description": "Applly the anonymous function (\\x -> x+1) to the value 1, resulting in 2."
+    },
+    {
+    "Statement": "(\\x y z -> x+y+z) 1 2 3",
+    "Description": "Applly the anonymous function (\\x y z -> x+y+z) to the values 1, 2, and 3, resulting in 6."
+    },
+    {
+    "Statement": "app :: (a -> b) -> a->b",
+    "Description": "Define a higher-order function 'app' that takes a function 'f' and a value 'x' as arguments, and applies 'f' to 'x'."
+    },
+    {
+    "Statement": "app f x = f x",
+    "Description": "Implement the 'app' function by applying the function 'f' to the value 'x'."
+    },
+    {
+    "Statement": "app (\\x -> x+1) 1",
+    "Description": "Applly the anonymous function (\\x -> x+1) to the value 1 using the 'app' function, resulting in 2."
+    },
+    {
+    "Statement": "map :: (a -> b) -> [a] -> [b]",
+    "Description": "Define a function 'map' that takes a function 'f' and a list 'xs' as arguments, and applies 'f' to each element of 'xs', returning a list of the results."
+    },
+    {
+    "Statement": "map (\\x -> x+1) [1,2,3,4,5]",
+    "Description": "Applly the anonymous function (\\x -> x+1) to each element of the list [1,2,3,4,5] using 'map', resulting in [2,3,4,5,6]."
+    },
+    {
+    "Statement": "map (\\(x,y) -> x+y) [(1,2), (2,3), (3,4)]",
+    "Description": "Applly the anonymous function ((x,y) -> x+y) to each tuple in the list [(1,2), (2,3), (3,4)] using 'map', resulting in [3,5,7]."
+    },
+    {
+    "Statement": "filter :: (a -> Bool) -> [a] -> [a]",
+    "Description": "Define a function 'filter' that takes a predicate function 'f' and a list 'xs' as arguments, and returns a list containing only the elements of 'xs' for which 'f' returns True."
+    },
+    {
+    "Statement": "filter (\\x -> x>2) [1,2,3,4,5]",
+    "Description": "Filter the list [1,2,3,4,5] using the predicate function (\\x -> x>2), resulting in [3,4,5]."
+    },
+    {
+    "Statement": "filter (\\(x,y) -> x/=y) [(1,2), (2,2)]",
+    "Description": "Filter the list of tuples [(1,2), (2,2)] using the predicate function ((x,y) -> x/=y), resulting in [(1,2)]."
+    },
+    {
+    "Statement": "(3, 4) :: (Int, Int)",
+    "Description": "Represent a tuple containing two integers, 3 and 4."
+    },
+    {
+    "Statement": "fst :: (a,b,c) -> a",
+    "Description": "Return the first element of a triple."
+    },
+    {
+    "Statement": "fst (x,_,_) = x",
+    "Description": "Define the function 'fst' which extracts the first element of a triple."
+    },
+    {
+    "Statement": "snd :: (a,b,c) -> b",
+    "Description": "Return the second element of a triple."
+    },
+    {
+    "Statement": "snd (_,y,_) = y",
+    "Description": "Define the function 'snd' which extracts the second element of a triple."
+    },
+    {
+    "Statement": "addTuples3 :: [(Int, Int, Int)] -> [Int]",
+    "Description": "Define a function 'addTuples3' that takes a list of triples of integers and returns a list of integers."
+    },
+    {
+    "Statement": "addTuples3 xs = [ x+y+z | (x,y,z) <- xs ]",
+    "Description": "Generate a list by adding the elements of each triple in the input list."
+    },
+    {
+    "Statement": "app2 :: (a -> b -> c) -> a -> b -> c",
+    "Description": "Define a higher-order function 'app2' that takes a function 'f' and two values 'x' and 'y' as arguments, and applies 'f' to 'x' and 'y'."
+    },
+    {
+    "Statement": "app2 f x y = f x y",
+    "Description": "Implement the 'app2' function by applying the function 'f' to the values 'x' and 'y'."
+    },
+    {
+    "Statement": "\\x -> x*2",
+    "Description": "Define an anonymous function that takes a parameter 'x' and returns 'x*2'."
+    },
+    {
+    "Statement": "double = \\x -> x*2",
+    "Description": "Bind the anonymous function \\x -> x*2 to the name 'double'."
+    },
+    {
+    "Statement": "\\x y z -> x*y*z",
+    "Description": "Define an anonymous function that takes three parameters 'x', 'y', and 'z', and returns their product."
+    },
+    {
+    "Statement": "(\\x -> x*2) 3",
+    "Description": "Apply the anonymous function (\\x -> x*2) to the value 3, resulting in 6."
+    },
+    {
+    "Statement": "(\\x y z -> x*y*z) 2 3 4",
+    "Description": "Apply the anonymous function (\\x y z -> x*y*z) to the values 2, 3, and 4, resulting in 24."
+    },
+    {
+    "Statement": "app2 :: (a -> b -> c) -> a -> b -> c",
+    "Description": "Define a higher-order function 'app2' that takes a function 'f' and two values 'x' and 'y' as arguments, and applies 'f' to 'x' and 'y'."
+    },
+    {
+    "Statement": "app2 f x y = f x y",
+    "Description": "Implement the 'app2' function by applying the function 'f' to the values 'x' and 'y'."
+    },
+    {
+    "Statement": "app2 (\\x y -> x+y) 1 2",
+    "Description": "Apply the anonymous function (\\x y -> x+y) to the values 1 and 2 using the 'app2' function, resulting in 3."
+    },
+    {
+    "Statement": "map2 :: (a -> b -> c) -> [a] -> [b] -> [c]",
+    "Description": "Define a function 'map2' that takes a function 'f' and two lists 'xs' and 'ys' as arguments, and applies 'f' to corresponding elements of 'xs' and 'ys', returning a list of the results."
+    },
+    {
+    "Statement": "map2 (\\x y -> x+y) [1,2,3] [4,5,6]",
+    "Description": "Apply the anonymous function (\\x y -> x+y) to corresponding elements of the lists [1,2,3] and [4,5,6] using 'map2', resulting in [5,7,9]."
+    },
+    {
+    "Statement": "map2 (\\(x,y) z -> x+y+z) [(1,2),(2,3),(3,4)] [5,6,7]",
+    "Description": "Apply the anonymous function ((x,y) z -> x+y+z) to each tuple in the list [(1,2),(2,3),(3,4)] and the corresponding element in the list [5,6,7] using 'map2', resulting in [8,11,14]."
+    },
+    {
+    "Statement": "filter2 :: ((a,b) -> Bool) -> [(a,b)] -> [(a,b)]",
+    "Description": "Define a function 'filter2' that takes a predicate function 'f' and a list of tuples 'xs' as arguments, and returns a list containing only the tuples of 'xs' for which 'f' returns True."
+    },
+    {
+    "Statement": "filter2 (\\(x,y) -> x>y) [(1,2),(2,1),(3,3)]",
+    "Description": "Filter the list of tuples [(1,2),(2,1),(3,3)] using the predicate function (\\(x,y) -> x>y), resulting in [(2,1),(3,3)]."
+    },
+    {
+    "Statement": "filter2 (\\(x,y) -> x==y) [(1,1),(2,3),(3,3)]",
+    "Description": "Filter the list of tuples [(1,1),(2,3),(3,3)] using the predicate function (\\(x,y) -> x==y), resulting in [(1,1),(3,3)]."
+    },
+    {
+    "Statement": "zipWith3 :: (a -> b -> c -> d) -> [a] -> [b] -> [c] -> [d]",
+    "Description": "Define a function 'zipWith3' that takes a function 'f' and three lists 'xs', 'ys', and 'zs' as arguments, and applies 'f' to corresponding elements of 'xs', 'ys', and 'zs', returning a list of the results."
+    },
+    {
+    "Statement": "zipWith3 (\\x y z -> x+y*z) [1,2,3] [4,5,6] [7,8,9]",
+    "Description": "Apply the anonymous function (\\x y z -> x+y*z) to corresponding elements of the lists [1,2,3], [4,5,6], and [7,8,9] using 'zipWith3', resulting in [29,42,57]."
+    },
+    {
+    "Statement": "zipWith3 (\\(x,y) z w -> x+y*z*w) [(1,2),(2,3),(3,4)] [5,6,7] [8,9,10]",
+    "Description": "Apply the anonymous function ((x,y) z w -> x+y*z*w) to each tuple in the list [(1,2),(2,3),(3,4)] and the corresponding elements in the lists [5,6,7] and [8,9,10] using 'zipWith3', resulting in [41,74,127]."
+    },
+    {
+    "Statement": "foldl :: (b -> a -> b) -> b -> [a] -> b",
+    "Description": "Define a function 'foldl' that takes a binary function 'f', an initial accumulator value 'acc', and a list 'xs' as arguments, and applies 'f' to each element of 'xs' along with the accumulator, returning the final accumulator value."
+    },
+    {
+    "Statement": "foldl (\\acc x -> acc+x) 0 [1,2,3,4,5]",
+    "Description": "Fold the list [1,2,3,4,5] from the left using the binary function (\\acc x -> acc+x) and the initial accumulator value 0, resulting in 15."
+    },
+    {
+    "Statement": "foldl (\\acc (x,y) -> acc+x*y) 1 [(1,2),(2,3),(3,4),(4,5)]",
+    "Description": "Fold the list of tuples [(1,2),(2,3),(3,4),(4,5)] from the left using the binary function (\\acc (x,y) -> acc+x*y) and the initial accumulator value 1, resulting in 241."
+    },
+    {
+    "Statement": "foldr :: (a -> b -> b) -> b -> [a] -> b",
+    "Description": "Define a function 'foldr' that takes a binary function 'f', an initial accumulator value 'acc', and a list 'xs' as arguments, and applies 'f' to each element of 'xs' along with the accumulator, returning the final accumulator value."
+    },
+    {
+    "Statement": "foldr (\\x acc -> x+acc) 0 [1,2,3,4,5]",
+    "Description": "Fold the list [1,2,3,4,5] from the right using the binary function (\\x acc -> x+acc) and the initial accumulator value 0, resulting in 15."
+    },
+    {
+    "Statement": "foldr (\\(x,y) acc -> x*y+acc) 1 [(1,2),(2,3),(3,4),(4,5)]",
+    "Description": "Fold the list of tuples [(1,2),(2,3),(3,4),(4,5)] from the right using the binary function (\\(x,y) acc -> x*y+acc) and the initial accumulator value 1, resulting in 781."
+    },
+    {
+    "Statement": "takeWhile :: (a -> Bool) -> [a] -> [a]",
+    "Description": "Define a function 'takeWhile' that takes a predicate function 'f' and a list 'xs' as arguments, and returns the longest prefix of 'xs' for which all elements satisfy 'f'."
+    },
+    {
+    "Statement": "takeWhile (\\x -> x<5) [1,2,3,4,5,6,7,8]",
+    "Description": "Take elements from the list [1,2,3,4,5,6,7,8] while the element is less than 5 using the predicate function (\\x -> x<5), resulting in [1,2,3,4]."
+    },
+    {
+    "Statement": "takeWhile (\\(x,y) -> x<y) [(1,2),(2,3),(3,1),(4,5)]",
+    "Description": "Take elements from the list of tuples [(1,2),(2,3),(3,1),(4,5)] while the first element of the tuple is less than the second using the predicate function (\\(x,y) -> x<y), resulting in [(1,2),(2,3)]."
+    },
+    {
+    "Statement": "dropWhile :: (a -> Bool) -> [a] -> [a]",
+    "Description": "Define a function 'dropWhile' that takes a predicate function 'f' and a list 'xs' as arguments, and returns the suffix of 'xs' after the longest prefix for which all elements satisfy 'f'."
+    },
+    {
+    "Statement": "dropWhile (\\x -> x<5) [1,2,3,4,5,6,7,8]",
+    "Description": "Drop elements from the list [1,2,3,4,5,6,7,8] while the element is less than 5 using the predicate function (\\x -> x<5), resulting in [5,6,7,8]."
+    },
+    {
+    "Statement": "dropWhile (\\(x,y) -> x<y) [(1,2),(2,3),(3,1),(4,5)]",
+    "Description": "Drop elements from the list of tuples [(1,2),(2,3),(3,1),(4,5)] while the first element of the tuple is less than the second using the predicate function (\\(x,y) -> x<y), resulting in [(3,1),(4,5)]."
+    },
+    {
+    "Statement": "elem :: Eq a => a -> [a] -> Bool",
+    "Description": "Define a function 'elem' that takes a value 'x' and a list 'xs' as arguments, and returns True if 'x' is an element of 'xs', False otherwise."
+    },
+    {
+    "Statement": "elem 3 [1,2,3,4,5]",
+    "Description": "Check if the value 3 is an element of the list [1,2,3,4,5], resulting in True."
+    },
+    {
+    "Statement": "elem 'a' \"Haskell\"",
+    "Description": "Check if the character 'a' is an element of the string \"Haskell\", resulting in True."
+    },
+    {
+    "Statement": "notElem :: Eq a => a -> [a] -> Bool",
+    "Description": "Define a function 'notElem' that takes a value 'x' and a list 'xs' as arguments, and returns True if 'x' is not an element of 'xs', False otherwise."
+    },
+    {
+    "Statement": "notElem 6 [1,2,3,4,5]",
+    "Description": "Check if the value 6 is not an element of the list [1,2,3,4,5], resulting in True."
+    },
+    {
+    "Statement": "notElem 'z' \"Haskell\"",
+    "Description": "Check if the character 'z' is not an element of the string \"Haskell\", resulting in True."
+    },
+    {
+    "Statement": "f :: a -> b -> c -> d",
+    "Description": "Define a function 'f' that takes three arguments of types 'a', 'b', and 'c', and returns a value of type 'd'."
+    },
+    {
+    "Statement": "f :: a -> (b -> (c -> d))",
+    "Description": "Alternatively define the function 'f' using currying syntax, where it takes an argument of type 'a' and returns a function that takes an argument of type 'b' and returns another function that takes an argument of type 'c' and finally returns a value of type 'd'."
+    },
+    {
+    "Statement": "add :: Int -> Int -> Int",
+    "Description": "Define a function 'add' which takes two 'Int' arguments and returns an 'Int'."
+    },
+    {
+    "Statement": "add x y = x+y",
+    "Description": "Define the 'add' function such that it takes two arguments 'x' and 'y', then returns their sum."
+    },
+    {
+    "Statement": "add x = (\\y -> x+y)",
+    "Description": "Define the 'add' function where it partially applies 'x' to a lambda function taking 'y' as argument, returning their sum."
+    },
+    {
+    "Statement": "add = (\\x -> (\\y -> x+y))",
+    "Description": "Define the 'add' function as a composition of two lambda functions, the outer one taking 'x' and the inner one taking 'y', returning their sum."
+    },
+    {
+    "Statement": "add :: Int -> Int -> Int",
+    "Description": "Define a function 'add' which takes two 'Int' arguments and returns an 'Int'."
+    },
+    {
+    "Statement": "add = (\\x -> (\\y -> x+y))",
+    "Description": "Define the 'add' function as a composition of two lambda functions, the outer one taking 'x' and the inner one taking 'y', returning their sum."
+    },
+    {
+    "Statement": "add 1 :: Int -> Int",
+    "Description": "Partially apply the 'add' function with '1' as the first argument, resulting in a function that takes an 'Int' and returns an 'Int' by adding '1' to its argument."
+    },
+    {
+    "Statement": "map :: (a -> b) -> [a] -> [b]",
+    "Description": "Define a function 'map' which takes a function from 'a' to 'b' and a list of 'a's, returning a list of 'b's."
+    },
+    {
+    "Statement": "doubleList = map (\\x -> 2x)",
+    "Description": "Define the 'doubleList' function using 'map' with a lambda function that doubles its argument."
+    },
+    {
+    "Statement": "descSort = reverse . sort",
+    "Description": "Define 'descSort' as the composition of 'reverse' and 'sort' functions."
+    },
+    {
+    "Statement": "descSort = (\\x -> reverse (sort x))",
+    "Description": "Define 'descSort' as a lambda function that reverses the sorted input list 'x'."
+    },
+    {
+    "Statement": "descSort x = reverse (sort x)",
+    "Description": "Define 'descSort' as a function that takes an argument 'x' and returns the reverse of the sorted 'x'."
+    },
+    {
+    "Statement": "map2D :: (a -> b) -> [[a]] -> [[b]]",
+    "Description": "Declare 'map2D' as a function taking a function from 'a' to 'b' and a list of lists of 'a's, returning a list of lists of 'b's."
+    },
+    {
+    "Statement": "map2D = map . map",
+    "Description": "Define 'map2D' as the composition of 'map' function applied twice."
+    },
+    {
+    "Statement": "map2D x = (\\xs -> map (\\ys -> map x ys) xs)",
+    "Description": "Define 'map2D' as a function taking an argument 'x' and returning a function that maps 'x' over each element of a list of lists."
+    },
+    {
+    "Statement": "f xs = map (\\x -> x+1) (filter (\\x -> x>1) xs)",
+    "Description": "Define the function 'f' which takes a list 'xs' and applies a mapping and filtering operation sequentially."
+    },
+    {
+    "Statement": "f xs = map (\\x -> x+1) $ filter (\\x -> x>1) xs",
+    "Description": "Define the function 'f' where the '$' operator is used to replace the parentheses, indicating that the result of 'filter' is passed as an argument to 'map'."
+    },
+    {
+    "Statement": "sum = foldr (+) 0",
+    "Description": "Define 'sum' as a fold operation using the '+' operator and starting with an initial accumulator of '0'."
+    },
+    {
+    "Statement": "and = foldr (&&) True",
+    "Description": "Define 'and' as a fold operation using the '&&' operator and starting with an initial accumulator of 'True'."
+    },
+    {
+    "Statement": "or = foldr (||) False",
+    "Description": "Define 'or' as a fold operation using the '||' operator and starting with an initial accumulator of 'False'."
+    },
+    {
+    "Statement": "count e = foldr (\\x acc -> if e == x then acc+1 else acc) 0",
+    "Description": "Define 'count' as a fold operation that counts occurrences of 'e' in a list."
+    },
+    {
+    "Statement": "isAll e = foldr (\\x acc -> e == x && acc) True",
+    "Description": "Define 'isAll' as a fold operation that checks if all elements in the list are equal to 'e'."
+    },
+    {
+    "Statement": "length = foldr (\\_ acc -> acc + 1) 0",
+    "Description": "Define 'length' as a fold operation that counts the length of the list."
+    },
+    {
+    "Statement": "square :: Int -> Int",
+    "Description": "Declare a function 'square' which takes an 'Int' and returns its square."
+    },
+    {
+    "Statement": "square x = x * x",
+    "Description": "Define the 'square' function where it squares the input 'x'."
+    },
+    {
+    "Statement": "square x = (^2) x",
+    "Description": "Define 'square' as a function that applies the exponentiation operator (^) with an exponent of 2 to 'x'."
+    },
+    {
+    "Statement": "cube :: Int -> Int",
+    "Description": "Declare a function 'cube' which takes an 'Int' and returns its cube."
+    },
+    {
+    "Statement": "cube x = x * x * x",
+    "Description": "Define the 'cube' function where it computes the cube of the input 'x'."
+    },
+    {
+    "Statement": "double :: Int -> Int",
+    "Description": "Declare a function 'double' which takes an 'Int' and returns its double."
+    },
+    {
+    "Statement": "double x = x + x",
+    "Description": "Define the 'double' function where it doubles the input 'x'."
+    },
+    {
+    "Statement": "triple :: Int -> Int",
+    "Description": "Declare a function 'triple' which takes an 'Int' and returns its triple."
+    },
+    {
+    "Statement": "triple x = 3 * x",
+    "Description": "Define the 'triple' function where it triples the input 'x'."
+    },
+    {
+    "Statement": "isEven :: Int -> Bool",
+    "Description": "Declare a function 'isEven' which takes an 'Int' and returns 'True' if it's even, 'False' otherwise."
+    },
+    {
+    "Statement": "isEven x = x `mod` 2 == 0",
+    "Description": "Define the 'isEven' function where it checks if the input 'x' is even using the modulo operator."
+    },
+    {
+    "Statement": "isOdd :: Int -> Bool",
+    "Description": "Declare a function 'isOdd' which takes an 'Int' and returns 'True' if it's odd, 'False' otherwise."
+    },
+    {
+    "Statement": "isOdd x = x `mod` 2 /= 0",
+    "Description": "Define the 'isOdd' function where it checks if the input 'x' is odd using the modulo operator."
+    },
+    {
+    "Statement": "factorial :: Int -> Int",
+    "Description": "Declare a function 'factorial' which takes an 'Int' and returns its factorial."
+    },
+    {
+    "Statement": "factorial 0 = 1",
+    "Description": "Define the base case of 'factorial' where factorial of 0 is 1."
+    },
+    {
+    "Statement": "factorial n = n * factorial (n - 1)",
+    "Description": "Define the 'factorial' function recursively using the formula n * (n-1)!"
+    },
+    {
+    "Statement": "fibonacci :: Int -> Int",
+    "Description": "Declare a function 'fibonacci' which takes an 'Int' and returns the nth Fibonacci number."
+    },
+    {
+    "Statement": "fibonacci 0 = 0",
+    "Description": "Define the base case of 'fibonacci' where the 0th Fibonacci number is 0."
+    },
+    {
+    "Statement": "fibonacci 1 = 1",
+    "Description": "Define the base case of 'fibonacci' where the 1st Fibonacci number is 1."
+    },
+    {
+    "Statement": "fibonacci n = fibonacci (n - 1) + fibonacci (n - 2)",
+    "Description": "Define the 'fibonacci' function recursively using the formula F(n) = F(n-1) + F(n-2)."
+    },
+    {
+    "Statement": "isPrime :: Int -> Bool",
+    "Description": "Declare a function 'isPrime' which takes an 'Int' and returns 'True' if it's a prime number, 'False' otherwise."
+    },
+    {
+    "Statement": "isPrime n = n > 1 && all (\\x -> n `mod` x /= 0) [2..floor (sqrt (fromIntegral n))]",
+    "Description": "Define the 'isPrime' function using a primality test that checks divisibility up to the square root of 'n'."
+    },
+    {
+    "Statement": "gcd' :: Int -> Int -> Int",
+    "Description": "Declare a function 'gcd'' which takes two 'Int's and returns their greatest common divisor."
+    },
+    {
+    "Statement": "gcd' a b = if b == 0 then a else gcd' b (a `mod` b)",
+    "Description": "Define the 'gcd'' function recursively using Euclid's algorithm."
+    },
+    {
+    "Statement": "lcm' :: Int -> Int -> Int",
+    "Description": "Declare a function 'lcm'' which takes two 'Int's and returns their least common multiple."
+    },
+    {
+    "Statement": "lcm' a b = abs (a * b) `div` gcd' a b",
+    "Description": "Define the 'lcm'' function using the formula LCM(a, b) = |a * b| / GCD(a, b)."
+    },
+    {
+    "Statement": "reverseList :: [a] -> [a]",
+    "Description": "Declare a function 'reverseList' which takes a list and returns its reverse."
+    },
+    {
+    "Statement": "reverseList [] = []",
+    "Description": "Define the base case of 'reverseList' where reversing an empty list results in an empty list."
+    },
+    {
+    "Statement": "reverseList (x:xs) = reverseList xs ++ [x]",
+    "Description": "Define the 'reverseList' function recursively by appending the head to the reversed tail."
+    },
+    {
+    "Statement": "palindrome :: Eq a => [a] -> Bool",
+    "Description": "Declare a function 'palindrome' which takes a list and returns 'True' if it's a palindrome, 'False' otherwise."
+    },
+    {
+    "Statement": "palindrome xs = xs == reverse xs",
+    "Description": "Define the 'palindrome' function by checking if the list is equal to its reverse."
+    },
+    {
+    "Statement": "evenIndices :: [a] -> [a]",
+    "Description": "Declare a function 'evenIndices' which takes a list and returns elements at even indices."
+    },
+    {
+    "Statement": "evenIndices xs = [x | (x, i) <- zip xs [0..], even i]",
+    "Description": "Define the 'evenIndices' function using list comprehension to filter elements at even indices."
+    },
+    {
+    "Statement": "splitAt' :: Int -> [a] -> ([a], [a])",
+    "Description": "Declare a function 'splitAt'' which takes an 'Int' and a list, returning a tuple of two lists split at the specified index."
+    },
+    {
+    "Statement": "splitAt' n xs = (take n xs, drop n xs)",
+    "Description": "Define the 'splitAt'' function using 'take' and 'drop' to split the list at the given index."
+    },
+    {
+    "Statement": "isEmpty :: [a] -> Bool",
+    "Description": "Declare a function 'isEmpty' which takes a list and returns 'True' if it's empty, 'False' otherwise."
+    },
+    {
+    "Statement": "isEmpty [] = True",
+    "Description": "Define the base case of 'isEmpty' where an empty list is considered empty."
+    },
+    {
+    "Statement": "isEmpty _ = False",
+    "Description": "Define the 'isEmpty' function where any non-empty list is considered not empty."
+    },
+    {
+    "Statement": "isSubset :: Eq a => [a] -> [a] -> Bool",
+    "Description": "Declare a function 'isSubset' which takes two lists and returns 'True' if the first list is a subset of the second, 'False' otherwise."
+    },
+    {
+    "Statement": "isSubset [] _ = True",
+    "Description": "Define the base case of 'isSubset' where an empty list is always a subset."
+    },
+    {
+    "Statement": "isSubset (x:xs) ys = elem x ys && isSubset xs ys",
+    "Description": "Define the 'isSubset' function recursively by checking if each element of the first list is present in the second list."
+    },
+    {
+    "Statement": "intersection :: Eq a => [a] -> [a] -> [a]",
+    "Description": "Declare a function 'intersection' which takes two lists and returns their intersection."
+    },
+    {
+    "Statement": "intersection xs ys = [x | x <- xs, x `elem` ys]",
+    "Description": "Define the 'intersection' function using list comprehension to filter elements present in both lists."
+    },
+    {
+    "Statement": "union :: Eq a => [a] -> [a] -> [a]",
+    "Description": "Declare a function 'union' which takes two lists and returns their union."
+    },
+    {
+    "Statement": "union xs ys = xs ++ [y | y <- ys, y `notElem` xs]",
+    "Description": "Define the 'union' function by concatenating the first list with elements from the second list that are not already present in the first list."
+    },
+    {
+    "Statement": "difference :: Eq a => [a] -> [a] -> [a]",
+    "Description": "Declare a function 'difference' which takes two lists and returns the elements in the first list that are not in the second list."
+    },
+    {
+    "Statement": "difference xs ys = [x | x <- xs, x `notElem` ys]",
+    "Description": "Define the 'difference' function using list comprehension to filter elements present in the first list but not in the second list."
+    },
+    {
+    "Statement": "flatten :: [[a]] -> [a]",
+    "Description": "Declare a function 'flatten' which takes a list of lists and returns a single concatenated list."
+    },
+    {
+    "Statement": "flatten xss = [x | xs <- xss, x <- xs]",
+    "Description": "Define the 'flatten' function using list comprehension to flatten the list of lists."
+    },
+    {
+    "Statement": "zipWith' :: (a -> b -> c) -> [a] -> [b] -> [c]",
+    "Description": "Declare a function 'zipWith'' which takes a function and two lists, applying the function to each pair of corresponding elements."
+    },
+    {
+    "Statement": "zipWith' _ [] _ = []",
+    "Description": "Define the base case of 'zipWith'' where one of the input lists is empty."
+    },
+    {
+    "Statement": "zipWith' _ _ [] = []",
+    "Description": "Define another base case of 'zipWith'' where one of the input lists is empty."
+    },
+    {
+    "Statement": "zipWith' f (x:xs) (y:ys) = f x y : zipWith' f xs ys",
+    "Description": "Define the 'zipWith'' function recursively by applying the function to corresponding elements of the input lists."
+    },
+    {
+    "Statement": "allEqual :: Eq a => [a] -> Bool",
+    "Description": "Declare a function 'allEqual' which takes a list and returns 'True' if all elements are equal, 'False' otherwise."
+    },
+    {
+    "Statement": "allEqual [] = True",
+    "Description": "Define the base case of 'allEqual' where an empty list is considered to have equal elements."
+    },
+    {
+    "Statement": "allEqual (x:xs) = all (== x) xs",
+    "Description": "Define the 'allEqual' function recursively by checking if all elements are equal to the first element."
+    },
+    {
+    "Statement": "mergeSort :: Ord a => [a] -> [a]",
+    "Description": "Declare a function 'mergeSort' which takes a list and returns a sorted list using merge sort algorithm."
+    },
+    {
+    "Statement": "mergeSort [] = []",
+    "Description": "Define the base case of 'mergeSort' where sorting an empty list results in an empty list."
+    },
+    {
+    "Statement": "mergeSort [x] = [x]",
+    "Description": "Define another base case of 'mergeSort' where sorting a singleton list results in the same list."
+    },
+    {
+    "Statement": "mergeSort xs = merge (mergeSort left) (mergeSort right)",
+    "Description": "Define the 'mergeSort' function recursively by merging recursively sorted left and right halves of the list."
+    },
+    {
+    "Statement": "split :: [a] -> ([a], [a])",
+    "Description": "Declare a function 'split' which takes a list and returns a pair of lists, splitting it into two halves."
+    },
+    {
+    "Statement": "split xs = splitAt (length xs `div` 2) xs",
+    "Description": "Define the 'split' function by splitting the list at its midpoint."
+    },
+    {
+    "Statement": "merge :: Ord a => [a] -> [a] -> [a]",
+    "Description": "Declare a function 'merge' which takes two sorted lists and merges them into a single sorted list."
+    },
+    {
+    "Statement": "merge [] ys = ys",
+    "Description": "Define the base case of 'merge' where one of the input lists is empty, resulting in the other list."
+    },
+    {
+    "Statement": "merge xs [] = xs",
+    "Description": "Define another base case of 'merge' where one of the input lists is empty, resulting in the other list."
+    },
+    {
+    "Statement": "merge (x:xs) (y:ys)",
+    "Description": "Define the 'merge' function recursively by comparing the heads of both lists and merging accordingly."
+    },
+    {
+    "Statement": "map f = foldr ((:) . f) []",
+    "Description": "Define 'map' as a fold operation that applies function 'f' to each element of the list and constructs a new list."
+    },
+    {
+    "Statement": "foldr (\\elem acc -> <term>) <start_acc> <list>",
+    "Description": "Define a fold operation where the function takes an element and an accumulator as arguments, starting with an initial accumulator value, and folding from the right over the list."
+    },
+    {
+    "Statement": "foldr (\\acc elem -> <term>) <start_acc> <list>",
+    "Description": "Define a fold operation where the function takes an accumulator and an element as arguments, starting with an initial accumulator value, and folding from the right over the list."
+    },
+    {
+    "Statement": "data Calculation = Add Int Int | Sub Int Int | Mul Int Int | Div Int Int",
+    "Description": "Define a datatype 'Calculation' with constructors 'Add', 'Sub', 'Mul', and 'Div', each taking two 'Int' arguments."
+    },
+    {
+    "Statement": "calc :: Calculation -> Int",
+    "Description": "Define a function 'calc' which takes a 'Calculation' and returns an 'Int'."
+    },
+    {
+    "Statement": "calc (Add x y) = x+y",
+    "Description": "Define the 'calc' function pattern matching on the 'Add' constructor, returning the sum of 'x' and 'y'."
+    },
+    {
+    "Statement": "calc (Sub x y) = x-y",
+    "Description": "Define the 'calc' function pattern matching on the 'Sub' constructor, returning the difference of 'x' and 'y'."
+    },
+    {
+    "Statement": "calc (Mul x y) = xy",
+    "Description": "Define the 'calc' function pattern matching on the 'Mul' constructor, returning the product of 'x' and 'y'."
+    },
+    {
+    "Statement": "calc (Div x y) = div x y",
+    "Description": "Define the 'calc' function pattern matching on the 'Div' constructor, returning the division of 'x' by 'y'."
+    },
+    {
+    "Statement": "data Person = person {name :: String, age :: Int}",
+    "Description": "Define a datatype 'Person' with record syntax having fields 'name' of type 'String' and 'age' of type 'Int'."
+    },
+    {
+    "Statement": "name :: Person -> String",
+    "Description": "Define a function 'name' which takes a 'Person' and returns their name."
+    },
+    {
+    "Statement": "age :: Person -> Int",
+    "Description": "Define a function 'age' which takes a 'Person' and returns their age."
+    },
+    {
+    "Statement": "greet :: Person -> String",
+    "Description": "Define a function 'greet' which takes a 'Person' and returns a greeting string."
+    },
+    {
+    "Statement": "greet person = \"Hi\" ++ name person",
+    "Description": "Define 'greet' function to concatenate \"Hi\" with the name of the person passed as argument."
+    },
+    {
+    "Statement": "greet (Person name_) = \"Hi\" ++ name_",
+    "Description": "Define 'greet' function pattern matching on 'Person' constructor with 'name_' as its argument, concatenating \"Hi\" with 'name_'."
+    },
+    {
+    "Statement": "greet (Person n_) = \"Hi\" ++ n_",
+    "Description": "Define 'greet' function pattern matching on 'Person' constructor with 'n_' as its argument, concatenating \"Hi\" with 'n_'."
+    },
+    {
+    "Statement": "data Point = D2 {x :: Int, y :: Int} | D3 {x :: Int, y :: Int, z :: Int}",
+    "Description": "Define a datatype 'Point' with two constructors: 'D2' taking 'x' and 'y' coordinates, and 'D3' taking 'x', 'y', and 'z' coordinates."
+    },
+    {
+    "Statement": "x (D2 1 2)",
+    "Description": "Access the 'x' coordinate of a 2D point, yielding '1'."
+    },
+    {
+    "Statement": "x (D3 1 2 3)",
+    "Description": "Access the 'x' coordinate of a 3D point, yielding '1'."
+    },
+    {
+    "Statement": "(+) :: Num a => a -> a -> a",
+    "Description": "Define an operator '+' which takes two arguments of type 'a' belonging to the 'Num' typeclass and returns a value of the same type."
+    },
+    {
+    "Statement": "sum :: Num p => [p] -> p",
+    "Description": "sum is a function which takes a list of values of type 'p' belonging to the 'Num' typeclass and returns a single value of type 'p'."
+    },
+    {
+    "Statement": "sum [] = 0",
+    "Description": "Define the base case of the sum function where an empty list is given, it returns 0."
+    },
+    {
+    "Statement": "sum (x:xs) = x + sum xs",
+    "Description": "Define the recursive case of the sum function where a non-empty list is given. It adds the first element 'x' to the result of recursively summing the rest of the list 'xs'."
+    },
+    {
+    "Statement": "Class Num a where",
+    "Description": "Declare a typeclass 'Num' which represents numeric types."
+    },
+    {
+    "Statement": "(+) :: a -> a -> a",
+    "Description": "Define the addition operation '+' within the 'Num' typeclass which takes two values of type 'a' and returns a value of type 'a'."
+    },
+    {
+    "Statement": "(-) :: a -> a -> a",
+    "Description": "Define the subtraction operation '-' within the 'Num' typeclass which takes two values of type 'a' and returns a value of type 'a'."
+    },
+    {
+    "Statement": "() :: a -> a -> a",
+    "Description": "Define the multiplication operation '' within the 'Num' typeclass which takes two values of type 'a' and returns a value of type 'a'."
+    },
+    {
+    "Statement": "negate :: a -> a",
+    "Description": "Define the negation operation 'negate' within the 'Num' typeclass which takes a value of type 'a' and returns a value of type 'a'."
+    },
+    {
+    "Statement": "abs :: a -> a",
+    "Description": "Define the absolute value operation 'abs' within the 'Num' typeclass which takes a value of type 'a' and returns a value of type 'a'."
+    },
+    {
+    "Statement": "signum :: a -> a",
+    "Description": "Define the signum operation 'signum' within the 'Num' typeclass which takes a value of type 'a' and returns a value of type 'a'."
+    },
+    {
+    "Statement": "fromInteger :: Integer-> a",
+    "Description": "Define a conversion function 'fromInteger' within the 'Num' typeclass which takes an Integer and returns a value of type 'a'."
+    },
+    {
+    "Statement": "Class Show a where",
+    "Description": "Declare a typeclass 'Show' which represents types that can be converted to strings."
+    },
+    {
+    "Statement": "showsPrec :: Int -> a -> ShowS",
+    "Description": "Define a function 'showsPrec' within the 'Show' typeclass which takes an integer and a value of type 'a', and returns a 'ShowS' function."
+    },
+    {
+    "Statement": "show :: a -> String",
+    "Description": "Define a function 'show' within the 'Show' typeclass which takes a value of type 'a' and returns a string representation."
+    },
+    {
+    "Statement": "showList :: [a] -> ShowS",
+    "Description": "Define a function 'showList' within the 'Show' typeclass which takes a list of values of type 'a' and returns a 'ShowS' function."
+    },
+    {
+    "Statement": "data Temperature = C Float | F Float",
+    "Description": "Define a datatype 'Temperature' with two constructors 'C' and 'F' representing temperatures in Celsius and Fahrenheit respectively."
+    },
+    {
+    "Statement": "instance Eq Temperature where",
+    "Description": "Declare an instance of the 'Eq' typeclass for the 'Temperature' datatype."
+    },
+    {
+    "Statement": "(==) (C n) (C m) = n == m",
+    "Description": "Define the equality operator '==' for comparing two temperatures in Celsius. It returns true if their values are equal."
+    },
+    {
+    "Statement": "(==) (F n) (F m) = n == m",
+    "Description": "Define the equality operator '==' for comparing two temperatures in Fahrenheit. It returns true if their values are equal."
+    },
+    {
+    "Statement": "(==) (C c) (F f) = (1.8c + 32) == f",
+    "Description": "Define the equality operator '==' for comparing a temperature in Celsius with a temperature in Fahrenheit. It returns true if the Celsius temperature, when converted to Fahrenheit, is equal to the given Fahrenheit temperature."
+    },
+    {
+    "Statement": "(==) (F f) (C c) = (1.8c + 32) == f",
+    "Description": "Define the equality operator '==' for comparing a temperature in Fahrenheit with a temperature in Celsius. It returns true if the Celsius temperature, when converted to Fahrenheit, is equal to the given Fahrenheit temperature."
+    },
+    {
+    "Statement": "data Temperature = C Float | F Float deriving (Show, Eq)",
+    "Description": "Define a datatype 'Temperature' with two constructors 'C' and 'F' representing temperatures in Celsius and Fahrenheit respectively. Also, derive instances for the 'Show' and 'Eq' typeclasses for the Temperature datatype."
+    },
+    {
+    "Statement": "Derived equivalence:",
+    "Description": "Describe the derived equivalence for the 'Eq' instance of the 'Temperature' datatype."
+    },
+    {
+    "Statement": "(==) (C n) (C m) = n == m",
+    "Description": "Define the equality operator '==' for comparing two temperatures in Celsius. It returns true if their values are equal."
+    },
+    {
+    "Statement": "(==) (F n) (F m) = n == m",
+    "Description": "Define the equality operator '==' for comparing two temperatures in Fahrenheit. It returns true if their values are equal."
+    },
+    {
+    "Statement": "(==)  _ _ = False",
+    "Description": "Define a catch-all case for the equality operator '==' which returns false for any other combination of temperatures."
+    },
+    {
+    "Statement": "import Data.Maybe",
+    "Description": "Import the 'Data.Maybe' module to access functions related to the 'Maybe' datatype."
+    },
+    {
+    "Statement": "isJust :: Maybe a -> Bool",
+    "Description": "Define a function 'isJust' which takes a 'Maybe' value and returns 'True' if it is a 'Just' value, otherwise returns 'False'."
+    },
+    {
+    "Statement": "isNothing :: Maybe a -> Bool",
+    "Description": "Define a function 'isNothing' which takes a 'Maybe' value and returns 'True' if it is a 'Nothing' value, otherwise returns 'False'."
+    },
+    {
+    "Statement": "fromJust :: Maybe a -> a",
+    "Description": "Define a function 'fromJust' which extracts the value from a 'Just' constructor. Caution: This function throws an error if given a 'Nothing' value, so it should be used with care."
+    },
+    {
+        "Statement": "import Data.List",
+        "Description": "Import the 'Data.List' module to access functions related to lists."
+    },
+    {
+        "Statement": "sort :: Ord a => [a] -> [a]",
+        "Description": "Define a function 'sort' which sorts a list of elements in ascending order."
+    },
+    {
+        "Statement": "maximum :: Ord a => [a] -> a",
+        "Description": "Define a function 'maximum' which returns the maximum element from a list."
+    },
+    {
+        "Statement": "minimum :: Ord a => [a] -> a",
+        "Description": "Define a function 'minimum' which returns the minimum element from a list."
+    },
+    {
+        "Statement": "sum :: Num a => [a] -> a",
+        "Description": "Define a function 'sum' which computes the sum of elements in a list."
+    },
+    {
+        "Statement": "product :: Num a => [a] -> a",
+        "Description": "Define a function 'product' which computes the product of elements in a list."
+    },
+    {
+        "Statement": "replicate :: Int -> a -> [a]",
+        "Description": "Define a function 'replicate' which creates a list of identical elements."
+    },
+    {
+        "Statement": "take :: Int -> [a] -> [a]",
+        "Description": "Define a function 'take' which extracts the first n elements from a list."
+    },
+    {
+        "Statement": "drop :: Int -> [a] -> [a]",
+        "Description": "Define a function 'drop' which removes the first n elements from a list."
+    },
+    {
+        "Statement": "reverse :: [a] -> [a]",
+        "Description": "Define a function 'reverse' which reverses the elements of a list."
+    },
+    {
+        "Statement": "zip :: [a] -> [b] -> [(a, b)]",
+        "Description": "Define a function 'zip' which pairs corresponding elements from two lists."
+    },
+    {
+        "Statement": "unzip :: [(a, b)] -> ([a], [b])",
+        "Description": "Define a function 'unzip' which separates a list of pairs into two lists."
+    },
+    {
+        "Statement": "transpose :: [[a]] -> [[a]]",
+        "Description": "Define a function 'transpose' which transposes a list of lists."
+    },
+    {
+        "Statement": "concat :: [[a]] -> [a]",
+        "Description": "Define a function 'concat' which concatenates a list of lists into a single list."
+    },
+    {
+        "Statement": "elem :: Eq a => a -> [a] -> Bool",
+        "Description": "Define a function 'elem' which checks if an element is present in a list."
+    },
+    {
+        "Statement": "notElem :: Eq a => a -> [a] -> Bool",
+        "Description": "Define a function 'notElem' which checks if an element is not present in a list."
+    },
+    {
+        "Statement": "lookup :: Eq a => a -> [(a, b)] -> Maybe b",
+        "Description": "Define a function 'lookup' which looks up a value in an association list."
+    },
+    {
+        "Statement": "filter :: (a -> Bool) -> [a] -> [a]",
+        "Description": "Define a function 'filter' which filters elements from a list based on a predicate."
+    },
+    {
+        "Statement": "foldl :: (a -> b -> a) -> a -> [b] -> a",
+        "Description": "Define a left-associative fold function 'foldl'."
+    },
+    {
+        "Statement": "foldr :: (a -> b -> b) -> b -> [a] -> b",
+        "Description": "Define a right-associative fold function 'foldr'."
+    },
+    {
+        "Statement": "scanl :: (a -> b -> a) -> a -> [b] -> [a]",
+        "Description": "Define a left-associative scan function 'scanl'."
+    },
+    {
+        "Statement": "scanr :: (a -> b -> b) -> b -> [a] -> [b]",
+        "Description": "Define a right-associative scan function 'scanr'."
+    },
+    {
+        "Statement": "iterate :: (a -> a) -> a -> [a]",
+        "Description": "Define a function 'iterate' which generates an infinite list by repeatedly applying a function."
+    },
+    {
+        "Statement": "repeat :: a -> [a]",
+        "Description": "Define a function 'repeat' which generates an infinite list of identical elements."
+    },
+    {
+        "Statement": "cycle :: [a] -> [a]",
+        "Description": "Define a function 'cycle' which generates an infinite repetition of a list."
+    },
+    {
+        "Statement": "splitAt :: Int -> [a] -> ([a], [a])",
+        "Description": "Define a function 'splitAt' which splits a list at a given index."
+    },
+    {
+        "Statement": "takeWhile :: (a -> Bool) -> [a] -> [a]",
+        "Description": "Define a function 'takeWhile' which takes elements from a list while a predicate holds."
+    },
+    {
+        "Statement": "dropWhile :: (a -> Bool) -> [a] -> [a]",
+        "Description": "Define a function 'dropWhile' which drops elements from a list while a predicate holds."
+    },
+    {
+        "Statement": "zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]",
+        "Description": "Define a function 'zipWith' which applies a function to pairs of elements from two lists."
+    },
+    {
+        "Statement": "lines :: String -> [String]",
+        "Description": "Define a function 'lines' which splits a string into lines."
+    },
+    {
+        "Statement": "words :: String -> [String]",
+        "Description": "Define a function 'words' which splits a string into words."
+    },
+    {
+        "Statement": "unlines :: [String] -> String",
+        "Description": "Define a function 'unlines' which joins lines into a single string."
+    },
+    {
+        "Statement": "unwords :: [String] -> String",
+        "Description": "Define a function 'unwords' which joins words into a single string."
+    },
+    {
+        "Statement": "nub :: Eq a => [a] -> [a]",
+        "Description": "Define a function 'nub' which removes duplicate elements from a list."
+    },
+    {
+        "Statement": "delete :: Eq a => a -> [a] -> [a]",
+        "Description": "Define a function 'delete' which removes the first occurrence of an element from a list."
+    },
+    {
+        "Statement": "union :: Eq a => [a] -> [a] -> [a]",
+        "Description": "Define a function 'union' which computes the union of two lists."
+    },
+    {
+        "Statement": "intersect :: Eq a => [a] -> [a] -> [a]",
+        "Description": "Define a function 'intersect' which computes the intersection of two lists."
+    },
+    {
+        "Statement": "sortOn :: Ord b => (a -> b) -> [a] -> [a]",
+        "Description": "Define a function 'sortOn' which sorts a list by a function's results."
+    },
+    {
+        "Statement": "groupBy :: (a -> a -> Bool) -> [a] -> [[a]]",
+        "Description": "Define a function 'groupBy' which groups elements of a list based on a predicate."
+    },
+    {
+        "Statement": "insert :: Ord a => a -> [a] -> [a]",
+        "Description": "Define a function 'insert' which inserts an element into a sorted list."
+    },
+    {
+        "Statement": "isPrefixOf :: Eq a => [a] -> [a] -> Bool",
+        "Description": "Define a function 'isPrefixOf' which checks if one list is a prefix of another."
+    },
+    {
+        "Statement": "isSuffixOf :: Eq a => [a] -> [a] -> Bool",
+        "Description": "Define a function 'isSuffixOf' which checks if one list is a suffix of another."
+    },
+    {
+        "Statement": "isInfixOf :: Eq a => [a] -> [a] -> Bool",
+        "Description": "Define a function 'isInfixOf' which checks if one list is contained within another."
+    },
+    {
+        "Statement": "partition :: (a -> Bool) -> [a] -> ([a], [a])",
+        "Description": "Define a function 'partition' which partitions a list into two based on a predicate."
+    }
+    ]

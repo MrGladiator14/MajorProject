@@ -1,0 +1,238 @@
+1.Angram, medium
+module Anagram (anagramsFor) where
+import Data.List
+import Data.Char
+lower :: String -> String
+lower = map toLower
+normalize :: String -> String
+normalize = sort . lower
+anagram :: String -> String -> Bool
+anagram x y = lower x /= lower y && normalize x == normalize y
+anagramsFor :: String -> [String] -> [String]
+anagramsFor xs xss = filter (anagram xs) xss
+
+
+
+2.Clock
+module Clock (addDelta, fromHourMin, toString) where
+import Text.Printf
+data Clock = Clock { dayMins :: Int } deriving Eq
+fromHourMin :: Int -> Int -> Clock
+fromHourMin h m = Clock $ (60*h + m) `mod` (60*24)
+toString :: Clock -> String
+toString (Clock {dayMins=dm}) = printf "%02d:%02d" (dm `div` 60) (dm `mod` 60)
+addDelta :: Int -> Int -> Clock -> Clock
+addDelta h m (Clock {dayMins=dm}) = Clock $ (dm + 60*h + m) `mod` (60*24)
+
+
+
+3.Crypto Square, medium 
+module CryptoSquare (encode) where
+import Control.Monad (guard)
+import Data.Bool (bool)
+import Data.Char (isAlpha, isDigit, toLower)
+import Data.List (splitAt, transpose, unfoldr)
+encode :: String -> String
+encode xs = unwords . transpose . fmap pad . chunksOf cols $ fmap toLower xs'
+  where
+    xs' :: String
+    xs' = filter (\c -> isAlpha c || isDigit c) xs
+    rows :: Int
+    rows = floor . sqrt' $ length xs'
+    cols :: Int
+    cols = rows + bool 0 1 (rows * rows < length xs')
+    pad :: String -> String
+    pad s = s <> replicate (cols - length s) ' '
+sqrt' :: Int -> Float
+sqrt' = sqrt . fromIntegral
+chunksOf :: Int -> [a] -> [[a]]
+chunksOf n = unfoldr f
+  where
+    f :: [a] -> Maybe ([a], [a])
+    f xs = splitAt n xs <$ guard (not $ null xs)
+
+
+
+4.Luhn, medium
+module Luhn (isValid) where
+import Data.Char
+double :: String -> String
+double s = construct (reverse s) 1
+ where
+  construct [] _ = []
+  construct (x:xs) i
+   | i `mod` 2 == 0  = mx : construct xs (i+1)
+   | otherwise = x : construct xs (i+1)
+   where 
+    d = digitToInt x * 2
+    mx = if d > 9 then intToDigit (d-9) else intToDigit d
+sumS :: String -> Int
+sumS s = sum $ map digitToInt s
+isValid :: String -> Bool
+isValid str = s `mod` 10 == 0 && normS /= "0"
+ where 
+  normS = filter isDigit str
+  s = sumS (double normS)
+
+
+
+5.Nth Prime, medium
+module Prime (nth) where
+nth :: Int -> Maybe Integer
+nth n 
+    | n < 1 = Nothing
+    | n == 1 = Just 2
+    | otherwise = Just $ filter isPrime [3, 5 .. ] !! (n - 2)
+    where 
+        isPrime :: Integer -> Bool
+        isPrime i = all (\x -> rem i x > 0) [3 .. (floor.sqrt) (fromIntegral i)]
+
+
+
+6.Minesweeper, medium
+module Minesweeper (annotate) where
+import Data.Char (intToDigit)
+annotate :: [String] -> [String]
+annotate m = zipWith (zipWith toChar) mines adj
+  where
+    mines = (map . map) (== '*') m
+    adj = smooth . (map . map $ fromEnum) $ mines
+    toChar True _  = '*'
+    toChar False 0 = ' '
+    toChar False n = intToDigit n
+smooth :: [[Int]] -> [[Int]]
+smooth = map (trips add3 0) . trips (zipWith3 add3) (repeat 0)
+  where
+    add3 a b c = a + b + c
+    
+trips :: (a -> a -> a -> b) -> a -> [a] -> [b]
+trips f border = go . (++ [border]) . (border :)
+  where
+    go l@(a:b:c:_) = f a b c : go (tail l)
+    go _           = []
+
+
+
+7.Game of Life, medium
+module GameOfLife (tick) where
+tick :: [[Int]] -> [[Int]]
+tick matrix = [[turnCell x y | y <- indices] | x <- indices]
+    where turnCell x y = case matrix !! x !! y of
+            0 -> if countLive x y == 3 then 1 else 0
+            1 -> if countLive x y `elem` [2, 3] then 1 else 0
+          countLive x y = sum [matrix !! (x + dx) !! (y + dy) |
+            dx <- [- 1, 0, 1], x + dx `elem` indices, 
+            dy <- [- 1, 0, 1], y + dy `elem` indices, (dx, dy) /= (0, 0)]
+                                          
+          indices = [0 .. length matrix - 1]
+
+
+
+8.Pascal's Triangle, medium
+module Triangle (rows) where
+rows :: Int -> [[Integer]]
+rows n = take n pascal where
+  pascal = [1] : map next pascal
+  next r = zipWith (+) (0:r) $ r++[0]
+
+
+
+9.Binary Search Tree, medium
+module BST
+    ( BST
+    , bstLeft
+    , bstRight
+    , bstValue
+    , empty
+    , fromList
+    , insert
+    , singleton
+    , toList
+    ) where
+data BST a = Empty | Node a (BST a) (BST a)  deriving (Eq, Show)
+bstLeft :: BST a -> Maybe (BST a)
+bstLeft Empty = Nothing
+bstLeft (Node _ l _) = Just l
+bstRight :: BST a -> Maybe (BST a)
+bstRight Empty = Nothing
+bstRight (Node _ _ r) = Just r
+bstValue :: BST a -> Maybe a
+bstValue Empty = Nothing
+bstValue (Node x _ _) = Just x
+empty :: BST a
+empty = Empty
+fromList :: Ord a => [a] -> BST a
+fromList = foldl (flip insert) Empty
+insert :: Ord a => a -> BST a -> BST a
+insert x Empty = singleton x
+insert x (Node y l r)
+  | x <= y = Node y (insert x l) r
+  | otherwise = Node y l (insert x r)
+singleton :: a -> BST a
+singleton x = Node x Empty Empty
+toList :: BST a -> [a]
+toList Empty = []
+toList (Node x l r) = toList l ++ [x] ++ toList r
+
+
+
+10.Queen Attack, medium
+module Queens
+    ( boardString
+    , canAttack
+    )
+where
+boardString :: Maybe (Int, Int) -> Maybe (Int, Int) -> String
+boardString white black = unlines
+    [ unwords [ board i j | j <- [0 .. 7] ] | i <- [0 .. 7] ]
+  where
+    board i j | Just (i, j) == white = "W"
+              | Just (i, j) == black = "B"
+              | otherwise            = "_"
+canAttack :: (Int, Int) -> (Int, Int) -> Bool
+canAttack (iA, jA) (iB, jB) =
+    iDiff == 0 || jDiff == 0 || abs iDiff == abs jDiff
+  where
+    iDiff = iA - iB
+    jDiff = jA - jB
+
+
+
+11.OCR Numbers, medium
+module OCR (convert) where
+import Control.Monad (guard)
+import Data.List (splitAt, intercalate, transpose, unfoldr)
+convert :: String -> String
+convert = intercalate "," . fmap (fmap toDigit . toChunks) . chunksOf 4 . lines
+toChunks :: [String] -> [[String]]
+toChunks = transpose . fmap (chunksOf 3)
+toDigit :: [String] -> Char
+toDigit xs = case xs of
+    [" _ ", "| |", "|_|", "   "] -> '0'
+    ["   ", "  |", "  |", "   "] -> '1'
+    [" _ ", " _|", "|_ ", "   "] -> '2'
+    [" _ ", " _|", " _|", "   "] -> '3'
+    ["   ", "|_|", "  |", "   "] -> '4'
+    [" _ ", "|_ ", " _|", "   "] -> '5'
+    [" _ ", "|_ ", "|_|", "   "] -> '6'
+    [" _ ", "  |", "  |", "   "] -> '7'
+    [" _ ", "|_|", "|_|", "   "] -> '8'
+    [" _ ", "|_|", " _|", "   "] -> '9'
+    _                            -> '?'
+chunksOf :: Int -> [a] -> [[a]]
+chunksOf n = unfoldr f
+  where
+    f :: [a] -> Maybe ([a], [a])
+    f xs = splitAt n xs <$ guard (not $ null xs)
+
+
+
+12.Knapsack, medium
+module Knapsack (maximumValue) where
+maximumValue :: Int -> [(Int, Int)] -> Int
+maximumValue = go
+  where
+    go _ [] = 0
+    go limit ((w, v) : xs)
+      | w > limit = go limit xs
+      | otherwise = max (v + go (limit - w) xs) (go limit xs)
